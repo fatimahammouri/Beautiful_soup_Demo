@@ -10,12 +10,5 @@ page = requests.get(URL)
 print (page.content)
 
 
-#  Create a Beautiful Soup Object --> input : HTML content we scraped 
-#  Use Beautiful Soup to find a Specific Element BY using the id attribute 
-#  Use find_all () to return an iterable containing all the HTML for all the job listings
-soup = BeautifulSoup(page.content, "html.parser")
-results = soup.find(id='ResultsContainer')
-job_elems = results.find_all('section', class_='card-content')
-
 
 
